@@ -1,0 +1,580 @@
+body {
+     margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 110px 700px 600px 400px 400px 600px 600px 80px;
+    grid-template-columns: 55% 45%;
+    grid-template-areas:  "header header"
+                          "paralax paralax"
+                          "contenido paralax2"
+                          "contacto contacto"
+                          "service service"
+                          "footer footer"
+                          "trabaja trabaja"
+                          "refooter refooter";         
+    height: 100vh;
+}
+
+.item {
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 110px;
+}
+
+.logo {
+    display: flex;  
+    padding-left: 60px;
+    align-items: center;
+    animation-name: logo;
+    animation-duration: 3s;
+}
+
+.logo h1:hover{
+    color: blue;
+}
+
+.logo h1 {
+    color: black;
+    font-size: 40px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.menu-bar {
+    display: flex;
+    animation: menu;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    margin-left: 500px;
+    justify-content: space-evenly;
+}
+
+.menu-bar li {
+    display: inline-flex;
+    color: black;
+}
+
+.menu-bar li:hover{
+    color:blue;
+}
+
+.menu-bar a{
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;   
+}
+
+
+.paralax {
+    grid-area: paralax;
+    background-image: url('instagram/compu3.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    opacity: 0.85;
+}
+ 
+
+.paralax h1 {
+    font-size: 100px;
+    color:white;
+    text-transform: lowercase;
+    text-align: left;
+    margin-top: 150px;
+    opacity: 1;
+    animation-name: h1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    padding-left: 60px;
+}
+
+.paralax span {
+    color: blue;
+}
+
+.imgMac{
+    height: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.contenido {
+    grid-area: contenido;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.contenido h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 100px;
+    opacity: 0.65;
+    padding: 40px 40px 0px;
+    border-left: 1px solid blue;
+}
+
+.contenido strong {
+    color: blue;
+}
+
+.contenido a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenido h3 {
+    text-align: center;
+    opacity: 0.7;
+}
+
+.contenido h3:hover {
+    color: blue;    
+}
+
+.paralax2 {
+    grid-area: paralax2;
+    background-image: url('instagram/foto.png');
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.contacto {
+    grid-area: contacto;
+    background-image: url('instagram/compu3.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    opacity: .8;
+}
+
+.contacto h1 {
+    color: white;
+    font-size: 80px;
+}
+
+.contacto span {
+    color: blue;
+}
+
+.service {
+    grid-area: service;
+    background: white;
+}
+
+.service h1 {
+    color: blue;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 120px;
+    justify-content: space-between;
+    opacity: 0.65;
+}
+.service a {
+    text-decoration: none;
+    color: black;
+}
+
+.service h3 {
+    text-align: center;
+    opacity: 0.7;
+}
+
+.service h3:hover {
+    color: blue;    
+}
+
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: repeat(2. 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "ux desarrollo"
+                         "marketing business";
+    grid-gap: 5px;
+    
+}
+
+.grid {
+    opacity: 0.8;
+}
+
+
+ .grid.ux{
+    grid-area: ux;
+    background-image: url('instagram/mac.jpg');
+    background-size: cover;
+}
+ .grid.desarrollo {
+     grid-area: desarrollo;
+     background-image: url('instagram/compu3.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+
+ }
+
+ .grid.marketing {
+     grid-area: marketing;
+     background-image: url('instagram/foto.png');
+     background-size: cover;
+ }
+
+ .grid.business {
+     grid-area: business;
+     background-image: url('instagram/compu.jpg');
+     background-size: cover;
+ }
+
+.overlay {
+     align-items: center;
+     justify-content: center;
+     margin-top: 20%;
+     color: white;
+     text-align: center;
+     font-size: 40px;
+ }
+
+ .grid:hover{   
+     opacity: 0.90;     
+ }
+
+ .trabaja {
+     display: flex;
+     grid-area: trabaja;
+     background-image: url('instagram/people.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+     margin-top: 5px;
+     box-shadow: inset 0 0 0 1000px rgba(65, 131, 215, 0.5);
+ } 
+
+
+ .trabaja h1 {
+     color: white;
+     font-size: 50px;
+     text-align: center;
+     margin-top: 10%;
+ }
+
+ .trabaja strong {
+     color: blue    ;
+ }
+
+ .trabaja p {
+     color: white;
+     text-align: center;
+     font-size: 20px;
+     padding: 0px 150px;
+ }
+.trabaja button {
+    display: inherit;
+    height: 80px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 45%;
+    margin-top: 2%;
+}
+
+.refooter {
+    grid-area: refooter;
+    display: flex;
+    background: #3a3b3f;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilos Pagina lo que somos*/    
+
+
+
+.wrapper {
+    display: grid;   
+    grid-template-rows:  110px 500px 500px 400px 80px;
+    grid-template-areas:         "header header"
+                                 "foto foto"
+                                "texto texto"
+                                "descripcion descripcion"
+                                "refooter refooter";    
+     height: 100vh;
+    }
+
+    
+
+.foto {
+    grid-area: foto;
+    background-image: url('instagram/compu3.jpg');
+     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    opacity: 0.85;
+   
+}
+
+.foto h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    color: white;
+    font-size: 100px;
+    text-align: left;
+}
+
+.foto strong {
+    color: blue;
+}
+
+
+.texto {
+    grid-area: texto;
+}
+
+.texto h1 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 100px;
+}
+
+.texto strong {
+    color: blue;
+}
+
+.texto p {
+    text-align: center;
+    padding: 0px 50px;
+    font-size: 20px;
+}
+
+.descripcion {
+    grid-area: descripcion;
+    background-image: url("instagram/compu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.9;
+}
+
+.descripcion h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.descripcion strong {
+    color:  blue;
+}
+
+/* Estilos pagina servicios */
+
+.contenedor {
+    display: grid;
+    grid-template-rows: 110px 500px 500px;
+    grid-template-areas: "header header"
+                        "fotico fotico"
+                        "hacemos hacemos"
+                        "refooter refooter";
+    height: 100vh;
+}
+
+.fotico {
+    grid-area: fotico;
+    background-image: url('instagram/compu3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.85;
+}
+
+.fotico h1 {
+    text-align: center;    
+    margin-top: 90px;
+    color: white;
+    font-size: 80px;
+}
+
+.fotico strong {
+    color: blue;
+}
+
+.hacemos
+{
+    grid-area: hacemos;
+}
+
+
+/* estilos pagina contacto*/
+
+.wrap {
+    display: grid;
+    grid-template-rows: 110px 500px 700px 110px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header"
+                        "contactanos contactanos"
+                        "form form"
+                        "refooter refooter";
+     height: 100vh;                        
+}
+
+.contactanos {
+    grid-area: contactanos; 
+    background-image: url('instagram/compu3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.85; 
+}
+
+.contactanos h1 {
+    text-align: center;    
+    margin-top: 90px;
+    color: white;
+    font-size: 80px;
+}
+
+.contactanos strong {
+    color: blue;
+}
+
+.contactanos h3 {
+    text-align: center;    
+    margin-top: 90px;
+    color: white;
+    font-size: 40px;
+}
+
+.form {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.formatos{
+    display: grid;
+    margin: 10px;
+    justify-content: center;
+}
+
+.nombreCompleto {
+    border: 1px solid blue;
+    padding: 5px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+#ciudad {
+    border: 1px solid blue;
+    padding: 5px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+#email {
+    border: 1px solid blue;
+    padding: 5px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+.textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#textareas {
+    border: 1px solid blue;
+    padding: 80px 100px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+ .btn {
+     border: 1px solid blue;
+     border-radius: 5px;
+     opacity: 0.8;
+     padding: 20px 50px;
+     cursor: pointer;
+     
+ }
+
+
+    
+
+
+/*ANIMACIONES*/
+
+/*animacion logo*/
+ /* @keyframes logo {
+    from  {
+        opacity: 0;;
+        }
+     to {   
+        opacity: 1;
+        }
+    }
+ @keyframes menu {
+        from  {
+            opacity: 0;;
+            }
+         to {   
+            opacity: 1;
+            }
+        } */
+@keyframes h1  { 
+ 0% {
+    opacity: 0;;
+    }
+20% {
+    opacity: 0;
+}
+
+ 100% {   
+    opacity: 1;
+    }
+} 
+
+       
+   
